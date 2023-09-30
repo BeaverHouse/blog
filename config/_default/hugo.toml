@@ -1,0 +1,76 @@
+baseurl = "https://blog.haulrest.me/" 
+canonifyURLs = false 
+disableAliases = true 
+disableHugoGeneratorInject = true 
+enableEmoji = true 
+enableGitInfo = false 
+enableRobotsTXT = true 
+languageCode = "ko-KR" 
+paginate = 10 
+rssLimit = 10 
+summarylength = 20 # 70 (default)
+title = "PrivateDev" 
+
+defaultContentLanguage = "ko"
+
+copyRight = "Copyright (c) 2023 LHU"
+
+[outputs]
+home = ["HTML", "RSS", "searchIndex"]
+section = ["HTML", "RSS", "SITEMAP"]
+
+[outputFormats.searchIndex]
+baseName = "search-index"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+# Add output format for section sitemap.xml
+[outputFormats.SITEMAP]
+baseName = "sitemap"
+isHTML = false
+isPlainText = true
+mediaType = "application/xml"
+noUgly = true
+rel = "sitemap"
+
+[sitemap]
+changefreq = "monthly"
+filename = "sitemap.xml"
+priority = 0.5
+
+[caches]
+[caches.getjson]
+dir = ":cacheDir/:project"
+maxAge = "30m"
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+[permalinks]
+blog = "/blog/:slug/"
+
+[minify.tdewolff.html]
+keepWhitespace = false
+
+[related]
+includeNewer = true
+threshold = 80
+toLower = false
+[[related.indices]]
+name = "categories"
+weight = 100
+[[related.indices]]
+name = "tags"
+weight = 80
+[[related.indices]]
+name = "date"
+weight = 10
+
+[imaging]
+anchor = "Smart"
+bgColor = "#ffffff"
+hint = "photo"
+quality = 75
+resampleFilter = "Box"
