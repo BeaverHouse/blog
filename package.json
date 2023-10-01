@@ -8,6 +8,7 @@
     "dev": "exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender --baseURL=http://localhost --noHTTPCache",
     "dev:drafts": "exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender --baseURL=http://localhost --noHTTPCache --buildDrafts",
     "create": "exec-bin node_modules/.bin/hugo/hugo new",
+    "gc": "exec-bin node_modules/.bin/hugo/hugo --gc",
     "lint": "npm run lint:markdown",
     "lint:scripts": "eslint --cache themes/doks/assets/js",
     "lint:styles": "stylelint --cache \"themes/doks/assets/scss/**/*.{css,sass,scss}\"",
@@ -22,10 +23,11 @@
     "preinfo": "npm version",
     "info": "npm list",
     "postinfo": "exec-bin node_modules/.bin/hugo/hugo version",
-    "postinstall": "shx rm -rf node_modules/.bin/hugo && shx mkdir node_modules/.bin/hugo && shx cp node_modules/gethyas/node_modules/.bin/hugo/* node_modules/.bin/hugo"
+    "postinstall": "shx rm -rf ./node_modules/.bin/hugo && shx mkdir node_modules/.bin/hugo && shx cp node_modules/gethyas/node_modules/.bin/hugo/* node_modules/.bin/hugo"
   },
   "dependencies": {
-    "@hyas/doks-core": "^1.0.7"
+    "@hyas/doks-core": "^1.0.7",
+    "medium-zoom": "^1.0.8"
   },
   "engines": {
     "node": ">=16.12.0"

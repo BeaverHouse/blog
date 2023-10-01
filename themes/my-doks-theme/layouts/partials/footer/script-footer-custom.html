@@ -1,0 +1,7 @@
+{{ $mediumZoom:= resources.Get "js/medium-zoom.js" -}}
+{{ $mediumZoom = $mediumZoom | js.Build -}}
+
+{{ $mediumZoom = $mediumZoom | minify | fingerprint "sha512" -}}
+
+<script src="{{ $mediumZoom.RelPermalink }}" integrity="{{ $mediumZoom.Data.Integrity }}" crossorigin="anonymous"
+  defer></script>
