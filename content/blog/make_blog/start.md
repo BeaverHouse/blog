@@ -57,12 +57,14 @@ yarn dev
 
 그 뒤로 기본 세팅, Test를 거쳤습니다.
 - config에서 불필요한 세팅은 지우고 custom하게 변경했습니다.   
-다국어 설정이 눈에 띄었는데, 따로 생각은 없어 한국어로만 세팅했습니다.
-- 게시글 작성도 진행해 보았습니다. Markdown을 사용합니다.   
-도구에 따라 게시글의 path가 폴더 경로에 의존하는 경우가 있어 별도 세팅이 불편했던 기억이 있는데, 여기서는 `slug`로 따로 설정하는 것이 소소하게 편했습니다.
+  - 다국어 설정이 눈에 띄었는데, 따로 생각은 없어 한국어로만 세팅했습니다.
+- 게시글 작성도 진행해 보았습니다. 
+  - Markdown을 사용합니다.   
+  - 도구에 따라 게시글의 path가 폴더 경로에 의존하는 경우가 있어 별도 세팅이 불편했던 기억이 있는데, 여기서는 `slug`로 설정하는 것이 소소하게 편했습니다.
 - HTML, Markdown 기본 설정을 변경했습니다.   
-기본 세팅이 끝난 뒤 themes 폴더에 있는 Readme에 설명이 있습니다.   
-새 탭에서 링크를 띄우기 위해 `target="_blank"` 태그를 붙이고, 그 외 간단한 변경만 수행하였습니다.
+  - 기본 template에서 themes 폴더에 있는 Readme에 설명이 있습니다.   
+  - 새 탭에서 링크를 띄우기 위해 `target="_blank"` 태그를 붙이고,   
+  그 외 간단한 변경만 수행하였습니다.
 
 ```
 ★ From /themes/my-doks-theme/README.md
@@ -77,7 +79,7 @@ Netlify도 선택지에 있었지만, 의존하는 플랫폼을 줄이고 싶었
 (특별한 이유는 없습니다)
 
 해당 [링크][ref5]를 참고해 진행했습니다.   
-**Doks는 Hugo 구동을 위해 [Hyas][ref6]라는 Framework를 따로 사용중입니다.**   
+**Doks 테마는 Hugo 구동을 위해 [Hyas][ref6]라는 Framework를 따로 사용중입니다.**   
 그래서 일반적인 Hugo 빌드 방식으로는 블로그가 배포되지 않았고,   
 Doks 테마 원작자의 Repo를 참고하였습니다.
 
@@ -94,7 +96,7 @@ Hugo, Doks는 minor해서 관련 문서 등이 매우 적습니다.
 
 - [Doks Github][etc0]
 - [Doks Discussion][etc1]    
-이 곳을 참고해 새 탭에서 링크 열기를 default로 설정했습니다.
+  - 이 곳을 참고해 새 탭에서 링크 열기를 default로 설정했습니다.
 - [Doks Documentation][etc2]
 - [Hugo Documentation][etc3]
 - [Doks on Github Pages][etc4]
