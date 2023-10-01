@@ -74,3 +74,7 @@ bgColor = "#ffffff"
 hint = "photo"
 quality = 75
 resampleFilter = "Box"
+
+[params]
+defaultTheme = "light"
+utterancesRepo = "BeaverHouse/blog"
