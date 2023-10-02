@@ -9,7 +9,7 @@ draft: false
 weight: 50
 images: []
 categories: ["Dev - Private"]
-tags: ["Hugo", "Github Blog"]
+tags: ["Github Blog", "Hugo", "Doks"]
 contributors: ["LHU"]
 pinned: false
 homepage: false
