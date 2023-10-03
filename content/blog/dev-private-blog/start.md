@@ -69,9 +69,11 @@ yarn dev
 ```
 ★ From /themes/my-doks-theme/README.md
 
+...
 Copy the file(s) you'd like to override from `./node_modules/@hyas/doks-core/` and paste to `./themes/my-doks-theme/`. Make sure to keep the folder structure.
 
 Supported folders are: `archetypes`, `assets`, `data`, and `layouts`.
+...
 ```
 
 배포는 Github Pages로 결정했습니다.   
