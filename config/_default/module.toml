@@ -111,3 +111,7 @@ target = "static"
 [[mounts]]
 source = "node_modules/medium-zoom"
 target = "assets/js/vendor/medium-zoom"
+
+[[mounts]]
+source = "assets/scss/common"
+target = "assets/scss/common"
