@@ -1,8 +1,8 @@
 # Blog
-Powered by Github Pages   
-Thanks to Hugo, Doks Theme
+Powered by Github Pages (w/ Github Actions)   
+Thanks to <a href="https://gohugo.io/" target="_blank" rel="noreferrer">Hugo</a>, [Doks][ref1] Theme
 
-<a href="https://gohugo.io/" target="_blank" rel="noreferrer">https://gohugo.io/</a>
+**https://blog.haulrest.me/**
 
 ### Doks Theme start
 ```
@@ -14,3 +14,4 @@ yarn dev
 ```
 
 
+[ref1]: https://github.com/gethyas/doks
