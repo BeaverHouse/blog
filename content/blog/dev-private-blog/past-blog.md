@@ -8,7 +8,7 @@ lastmod: 2023-10-01T01:00:00+09:00
 draft: false
 weight: 50
 images: []
-categories: ["Dev - Private"]
+categories: ["Dev - Blog"]
 tags: ["Github Blog"]
 contributors: ["LHU"]
 pinned: false

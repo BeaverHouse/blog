@@ -8,7 +8,7 @@ lastmod: 2023-10-02T00:00:00+09:00
 draft: false
 weight: 50
 images: []
-categories: ["Dev - Private"]
+categories: ["Dev - Blog"]
 tags: ["Github Blog", "Hugo", "Doks", "utterances", "Github Action", "medium-zoom"]
 contributors: ["LHU"]
 pinned: false

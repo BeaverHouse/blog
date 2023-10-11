@@ -19,7 +19,8 @@
 
     <h3 class="text-center">Category : {{ .Title }}</h3>
     {{ end -}}
-    {{ with .Params.summary -}}<p class="lead text-center">{{ . }}</p>{{ end -}}
+    {{ with .Params.summary -}}
+    <pre class="lead text-center" style="font-size: smaller;">{{ . }}</pre>{{ end -}}
     {{ with .Content -}}<div class="text-center">{{ . }}</div>{{ end -}}
   </div>
 </div>
