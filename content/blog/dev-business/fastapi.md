@@ -38,7 +38,7 @@ FastAPI는 [공식 문서][ref1]에서부터 빠르다를 강조하고 있습니
 - `uvloop`은 Cython으로 작성이 되어 있고,   
 일반적인 비동기 처리에 사용하는 `asyncio` loop에 비해 훨씬 좋은 성능을 냅니다.
 
-여기서 더 들어가면 `libuv` 등 계속 기원을 찾아 올라가서 아키텍쳐 분석까지 해야 하는데, 해당 부분을 Deep Dive할 정도는 되지 않아 넘어가도록 하겠습니다. **핵심은, FastAPI는 당시 가장 고성능의 Python loop를 기반으로 Wrapping을 거듭해 만들어진 Framework라는 것입니다.** 실제로, FastAPI의 당시 벤치마크 성능을 테스트했을 때 Python에서 FastAPI를 앞서는 것은 모체에 해당하는 `starlette`와 `uvicorn`뿐이었습니다.   
+여기서 더 들어가면 `libuv` 등 계속 기원을 찾아 올라가서 아키텍쳐 분석까지 해야 하는데, 해당 부분을 Deep Dive할 정도는 되지 않아 넘어가도록 하겠습니다. **핵심은, FastAPI는 당시 가장 고성능의 Python event loop를 기반으로 Wrapping을 거듭해 만들어진 Framework라는 것입니다.** 실제로, FastAPI의 당시 벤치마크 성능을 테스트했을 때 Python에서 FastAPI를 앞서는 것은 모체에 해당하는 `starlette`와 `uvicorn`뿐이었습니다.   
 물론, FastAPI가 모든 언어를 통틀어 제일 빠르다! 이것은 아닙니다. Node.js와 Go의 성능에 근접했지만 결국 밀렸고, 시간이 지난 지금 시점에서 FastAPI를 벤치마크 상으로 앞서는 경쟁자는 많습니다. Python 내에서도, 지금은 FastAPI의 성능을 넘어선다는 Framework가 존재합니다. 하지만, **주류 Python Web Framework 중에서** 여전히 FastAPI는 강력한 성능을 자랑하고 있습니다. 이제는 충분히 검증되었기 때문에, 실무에서도 무리 없이 사용할 수 있는 선택지가 되었습니다.
 
 ##### 대충 무슨 말인지는 알겠는데... ASGI가 뭔가요?
