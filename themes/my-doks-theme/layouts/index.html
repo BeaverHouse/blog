@@ -8,20 +8,38 @@
       <p>의미가 있는 내용을 남기려 노력하고 있습니다.</p>
     </div>
   </div>
-  <br>
+  <br />
   <div class="row justify-content-center text-center">
     <div class="col-lg-7">
-      <h5>블로그 보러 가기</h5>
-      <a class="btn btn-primary rounded-pill px-4" href="/blog/" role="button">Blog</a>
+      <a
+        class="btn btn-secondary rounded-pill px-5 py-2"
+        href="/blog/"
+        role="button"
+      >
+        <span style="font-size: large; color: white">블로그 보러 가기</span>
+      </a>
+    </div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <div class="row justify-content-center text-center">
+    <div class="col-lg-7">
+      <a
+        class="btn btn-primary rounded-pill px-5 py-2"
+        href="https://profile.haulrest.me"
+        target="_blank"
+        rel="noreferrer"
+        role="button"
+      >
+        <span style="font-size: xx-large">About Me</span>
+      </a>
     </div>
   </div>
 </section>
-{{ end }}
-
-{{ define "sidebar-prefooter" }}
-{{ if site.Data.doks.backgroundDots -}}
+{{ end }} {{ define "sidebar-prefooter" }} {{ if site.Data.doks.backgroundDots
+-}}
 <div class="d-flex justify-content-start">
   <div class="bg-dots"></div>
 </div>
-{{ end -}}
-{{ end }}
+{{ end -}} {{ end }}

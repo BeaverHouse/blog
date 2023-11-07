@@ -1,17 +1,26 @@
 [[main]]
+name = "Profile"
+url = "https://profile.haulrest.me"
+weight = 10
+post = "external"
+
+[[main]]
 name = "Blog"
 url = "/blog/"
 weight = 30
+post = "internal"
 
 [[main]]
 name = "Tags"
 url = "/tags/"
 weight = 30
+post = "internal"
 
 [[main]]
 name = "Categories"
 url = "/categories/"
 weight = 30
+post = "internal"
 
 [[social]]
 name = "GitHub"
