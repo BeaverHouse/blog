@@ -1,5 +1,5 @@
 [[main]]
-name = "Profile"
+name = "About"
 url = "https://profile.haulrest.me"
 weight = 10
 post = "external"
