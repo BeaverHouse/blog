@@ -9,7 +9,7 @@ draft: false
 weight: 50
 images: []
 categories: ["Dev - Personal"]
-tags: ["Python"]
+tags: ["Python", "Selenium"]
 contributors: ["LHU"]
 pinned: false
 homepage: false
