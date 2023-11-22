@@ -1,5 +1,5 @@
 ---
-slug: "231107-01"
+slug: "231107-1"
 title: "포트폴리오 웹페이지 만들기"
 description: ""
 summary: ""
