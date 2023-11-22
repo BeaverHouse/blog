@@ -1,5 +1,5 @@
 ---
-slug: "999999-99"
+slug: "999999-9"
 title: "블로그 템플릿"
 description: ""
 summary: "Summary"
