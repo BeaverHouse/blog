@@ -7,70 +7,91 @@
         {{ partial "main/blog-meta.html" . }}
       </div>
     </div>
-    {{ $image := .Resources.GetMatch (printf "**%s" (index .Params.images 0)) -}}
-    {{ if $image -}}
+    {{ $image := .Resources.GetMatch (printf "**%s" (index .Params.images 0))
+    -}} {{ if $image -}}
     <div class="col-md-13">
-      {{ partial "picture" (dict
-      "ctx" .
-      "src" $image
-      "alt" .Title
-      "class" "img-fluid blur-up img-post-single w-100 h-auto rounded-0"
-      )}}
+      {{ partial "picture" (dict "ctx" . "src" $image "alt" .Title "class"
+      "img-fluid blur-up img-post-single w-100 h-auto rounded-0" )}}
     </div>
     {{ end -}}
     <div class="col-md-12 col-lg-9">
-      {{ with .Params.summary -}}<p class="lead">{{ . }}</p>{{ end -}}
-      {{ .Content }}
-      {{ if .Params.tags -}}
+      {{ with .Params.summary -}}
+      <p class="lead">{{ . }}</p>
+      {{ end -}} {{ .Content }} {{ if .Params.tags -}}
       <div class="tag-list-single">
         {{ range $index, $tag := .Params.tags -}}
-        <a class="btn btn-light" href="/tags/{{ . | urlize }}/" role="button">{{ . }}</a>
+        <a class="btn btn-light" href="/tags/{{ . | urlize }}/" role="button"
+          >{{ . }}</a
+        >
         {{ end -}}
       </div>
       {{ end -}}
     </div>
     <div class="col-md-12 col-lg-9 comments">
       <script>
-        let getTheme = window.localStorage && window.localStorage.getItem("theme");
-        getTheme = getTheme == null ? '{{$.Site.Params.defaultTheme}}' : getTheme;
+        let getTheme =
+          window.localStorage && window.localStorage.getItem("theme");
+        getTheme =
+          getTheme == null ? "{{$.Site.Params.defaultTheme}}" : getTheme;
 
-        const theme = getTheme === 'dark' ? 'github-dark' : 'github-light';
-        let s = document.createElement('script');
-        s.src = 'https://utteranc.es/client.js';
-        s.setAttribute('repo', '{{$.Site.Params.utterancesRepo}}');
-        s.setAttribute('issue-term', 'pathname');
-        s.setAttribute('theme', theme);
-        s.setAttribute('crossorigin', 'anonymous');
-        s.setAttribute('async', '');
-        document.querySelector('div.comments').innerHTML = '';
-        document.querySelector('div.comments').appendChild(s);
+        const theme = getTheme === "dark" ? "dark" : "light";
+        let s = document.createElement("script");
+        s.src = "https://giscus.app/client.js";
+        s.setAttribute("data-repo", "{{$.Site.Params.commentRepo}}");
+        s.setAttribute("data-repo-id", "{{$.Site.Params.commentRepoId}}");
+        s.setAttribute("data-category", "{{$.Site.Params.commentCategory}}");
+        s.setAttribute(
+          "data-categoty-id",
+          "{{$.Site.Params.commentCategoryId}}"
+        );
+        s.setAttribute("data-mapping", "pathname");
+        s.setAttribute("data-strict", "1");
+        s.setAttribute("data-reactions-enabled", "1");
+        s.setAttribute("data-emit-metadata", "0");
+        s.setAttribute("data-input-position", "top");
+        s.setAttribute("data-theme", theme);
+        s.setAttribute("data-lang", "ko");
+        s.setAttribute("data-loading", "lazy");
+        s.setAttribute("crossorigin", "anonymous");
+        s.setAttribute("async", "");
+        document.querySelector("div.comments").innerHTML = "";
+        document.querySelector("div.comments").appendChild(s);
 
-        const mutationObserver = new MutationObserver((mutationsList, observer) => {
-          mutationsList.forEach(mutation => {
-            if (mutation.attributeName === "data-bs-theme") {
-              if (document.querySelector('.utterances-frame')) {
-                const theme = mutation.target.dataset.bsTheme === "dark" ? 'github-dark' : 'github-light'
-                const message = {
-                  type: 'set-theme',
-                  theme: theme
-                };
-                const iframe = document.querySelector('.utterances-frame');
-                iframe.contentWindow.postMessage(message, 'https://utteranc.es');
+        const mutationObserver = new MutationObserver(
+          (mutationsList, observer) => {
+            mutationsList.forEach((mutation) => {
+              if (mutation.attributeName === "data-bs-theme") {
+                if (document.querySelector(".giscus-frame")) {
+                  const theme =
+                    mutation.target.dataset.bsTheme === "dark"
+                      ? "dark"
+                      : "light";
+                  const message = {
+                    giscus: {
+                      setConfig: {
+                        theme: theme,
+                      },
+                    },
+                  };
+                  const iframe = document.querySelector(".giscus-frame");
+                  iframe.contentWindow.postMessage(
+                    message,
+                    "https://giscus.app"
+                  );
+                }
               }
-            }
-          })
+            });
+          }
+        );
+        mutationObserver.observe(document.documentElement, {
+          attributes: true,
         });
-        mutationObserver.observe(document.documentElement, { attributes: true });
       </script>
     </div>
   </div>
 </article>
-{{ end }}
-
-{{ define "sidebar-footer" }}
-{{ if site.Data.doks.relatedPosts -}}
-{{ $related := .Site.RegularPages.Related . | first 3 -}}
-{{ with $related -}}
+{{ end }} {{ define "sidebar-footer" }} {{ if site.Data.doks.relatedPosts -}} {{
+$related := .Site.RegularPages.Related . | first 3 -}} {{ with $related -}}
 <div class="bg-light">
   <section class="section section-related container">
     <div class="row justify-content-center">
@@ -84,7 +105,11 @@
         <div class="card">
           <div class="card-body">
             <article>
-              <h2 class="h3"><a class="stretched-link text-body" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h2>
+              <h2 class="h3">
+                <a class="stretched-link text-body" href="{{ .RelPermalink }}"
+                  >{{ .Params.title }}</a
+                >
+              </h2>
               <p>{{ .Params.summary | safeHTML }}</p>
               {{ partial "main/blog-meta.html" . -}}
             </article>
@@ -95,6 +120,4 @@
     </div>
   </section>
 </div>
-{{ end -}}
-{{ end -}}
-{{ end }}
+{{ end -}} {{ end -}} {{ end }}

@@ -77,4 +77,7 @@ resampleFilter = "Box"
 
 [params]
 defaultTheme = "light"
-utterancesRepo = "BeaverHouse/blog"
+commentRepo = "BeaverHouse/blog"
+commentRepoId = "R_kgDOKaT38w"
+commentCategory = "Blog Comments"
+commentCategoryId = "DIC_kwDOKaT3884CbPLr"
