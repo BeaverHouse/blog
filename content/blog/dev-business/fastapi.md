@@ -15,6 +15,8 @@ pinned: false
 homepage: false
 ---
 
+---
+
 FastAPI를 회사에서 처음 입문하고, 이를 사용한 지도 2년 반이 넘었습니다.  
 제일 친근한 Python Web Framework이고, 개인적으로도 실무에서도 유용하게 사용 중입니다.  
 그리고 FastAPI 생태계도 많이 성장해서, 당당한 주류로 자리잡은 것 같습니다.
