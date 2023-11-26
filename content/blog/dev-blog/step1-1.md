@@ -85,9 +85,10 @@ Markdown에 이미지를 넣어 보니, 게시글 section의 너비를 넘으면
 - 그 외 스타일 등 custom한 조정이 있었습니다.
 
 <br>
-<br>
 
-※ 해당 게시글도 테스트를 겸합니다.
+{{< callout context="note" title="Note" icon="info-circle" >}}
+해당 게시글도 테스트를 겸합니다.
+{{< /callout >}}
 
 {{< zoomimg src="/231002-1/test.jpg" caption="Test" width="200">}}
 
