@@ -17,7 +17,7 @@ homepage: false
 
 ---
 
-{{< callout context="info" title="Reminder" icon="info-circle" >}}  
+{{< callout context="note" title="Reminder" icon="info-circle" >}}  
 It's my first post written in English here.  
 I'm not using English as a native, so some expressions might be wrong.. please understand
 {{< /callout >}}
