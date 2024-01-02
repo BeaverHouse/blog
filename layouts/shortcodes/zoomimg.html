@@ -1,0 +1,28 @@
+{{- $image := resources.Get (.Get "src") -}}
+{{- $is_vector := eq (path.Ext $image) ".svg" -}}
+
+{{- $width := false -}}
+{{- if (not $is_vector) -}}
+{{- $width = .Get "width" | default $image.Width -}}
+{{- end -}}
+{{- with (.Get "width") -}}
+{{- $width = . -}}
+{{- end -}}
+
+{{- $height := false -}}
+{{- if (not $is_vector) -}}
+{{- $height = .Get "height" | default $image.Height -}}
+{{- end -}}
+{{- with (.Get "height") -}}
+{{- $height = . -}}
+{{- end -}}
+
+{{ $imgSrc := (.Get "src") -}}
+
+<figure class="text-center">
+    <img class="img-fluid lazyload blur-up rounded mx-auto d-block {{ with .Get " img_class" -}}{{- . -}}{{- end -}}"
+        id="zoom-default" src="{{ $image.RelPermalink }}" {{ with $width -}}width="{{- . -}}" {{- end }} {{ with $height
+        -}}height="{{- . -}}" {{- end }} {{ with .Get "alt" }}alt="{{.}}" {{ end }}>
+    </img>
+    {{- with .Get "caption" -}}<figcaption class="figure-caption">{{- . | safeHTML -}}</figcaption>{{- end -}}
+</figure>

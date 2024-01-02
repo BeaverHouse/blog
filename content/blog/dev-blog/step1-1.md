@@ -35,7 +35,7 @@ homepage: false
 GitLab, Bitbucket 등 다른 서비스에서도 비슷한 API를 활용할 수 있는데,  
 정책을 잘 수립하고 주의해서 사용한다면 유용하다고 생각합니다.
 
-{{< zoomimg src="/231002-1/1.png" >}}
+{{< zoomimg src="images/231002-1/1.png" >}}
 
 #### utterances 적용하기
 
@@ -90,7 +90,7 @@ Markdown에 이미지를 넣어 보니, 게시글 section의 너비를 넘으면
 해당 게시글도 테스트를 겸합니다.
 {{< /callout >}}
 
-{{< zoomimg src="/231002-1/test.jpg" caption="Test" width="200">}}
+{{< zoomimg src="images/231002-1/test.jpg" caption="Test" width="200">}}
 
 [ref1]: https://github.com/utterance/utterances
 [ref2]: https://disqus.com/

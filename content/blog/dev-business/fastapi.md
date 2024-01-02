@@ -21,7 +21,7 @@ FastAPI를 회사에서 처음 입문하고, 이를 사용한 지도 2년 반이
 제일 친근한 Python Web Framework이고, 개인적으로도 실무에서도 유용하게 사용 중입니다.  
 그리고 FastAPI 생태계도 많이 성장해서, 당당한 주류로 자리잡은 것 같습니다.
 
-{{< zoomimg src="/231101-1/1.png" caption="Flask, Django와 어깨를 나란히 하는 FastAPI">}}
+{{< zoomimg src="images/231101-1/1.png" caption="Flask, Django와 어깨를 나란히 하는 FastAPI">}}
 
 이 글을 작성하게 된 계기는, 저 나름대로 정리를 하기 위해서입니다.  
 리마인드를 하려는 목적도 있고, 제 이해도를 상대적으로 높이고 싶다는 목적도 있습니다.  

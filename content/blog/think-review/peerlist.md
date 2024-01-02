@@ -22,7 +22,7 @@ It's my first post written in English here.
 I'm not using English as a native, so some expressions might be wrong.. please understand
 {{< /callout >}}
 
-{{< zoomimg src="/231210-1/peer0.png">}}
+{{< zoomimg src="images/231210-1/peer0.png">}}
 
 Before beginning, thank you for some reactions with my activities including [Nakshatra Saxena][ref1], I was quite surprised because I started it very silently and just started to make collections.
 
@@ -30,7 +30,7 @@ As a some kind of response with gratefulness, I want to tell my personal opinion
 
 <br>
 
-{{< zoomimg src="/231210-1/peer1.png" caption="Peerlist's main message">}}
+{{< zoomimg src="images/231210-1/peer1.png" caption="Peerlist's main message">}}
 
 As I know, Peerlist is a job platform and social community for people in tech, especially including developers.
 **But actually with my case, it’s pretty hard that Peerlist acts as a job platform or something related.** I'm from South Korea, even [Linkedin][linked] is absolute minority as a platform in here because koreans usually find a job mainly on domestic platform. International platforms including Linkedin & Peerlist are used for only few who wants to make a job from abroad.  
@@ -40,7 +40,7 @@ So the reason why I’m using Peerlist is mainly based on the second option. I�
 
 <br>
 
-{{< zoomimg src="/231210-1/peer2.png" caption="Peerlist's collection">}}
+{{< zoomimg src="images/231210-1/peer2.png" caption="Peerlist's collection">}}
 
 By contrast, Peerlist gave me the options to start from small sharings & posts. This may sounds not very interesting to someone but it’s very huge merit on me. **It makes me confortable and inspiring to use the service without pressure and feel like I’m making my personal archive, not a portfolio, resume or report.** Of course I'm definitely open with trending tech stacks and try to level up myself, but on the other side I always eager to develop and stack knowledge naturally and slowly. In this perspective, Peerlist is very suitable for my goals because it provides diversity and freedom to advance myself with community.
 

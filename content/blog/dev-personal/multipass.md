@@ -88,15 +88,15 @@ sudo multipass copy-files k3s-master:/tmp/k3s.yaml Downloads/1.yaml
 
 `.yaml` 파일을 열어 보면 config 정보가 나오는데, `localhost`나 `127.0.0.1`로 되어 있는 연결 정보는 VM에 할당된 IP로 변경한 후, 호스트 컴퓨터의 config에 반영해 주시면 됩니다. context, user 등의 정보도 자유롭게 변경하시면 됩니다.
 
-{{< zoomimg src="/231123-1/ip.jpg" caption="VM list에 나오는 IP를 적으시면 됩니다.">}}
+{{< zoomimg src="images/231123-1/ip.jpg" caption="VM list에 나오는 IP를 적으시면 됩니다.">}}
 
 <br>
 
 이제는 `kubectl`, `helm` 등 호스트에 설치된 Tool로 VM 환경을 관리할 수 있습니다.  
 저는 테스트를 위해 Mac에서는 [OpenSearch][opensearch], Windows에서는 [ArgoWorkflows][argowf]를 기동시켜 보았습니다. Helm Chart는 검색으로 쉽게 찾을 수 있기 때문에 이 글에서는 생략하겠습니다.
 
-{{< zoomimg src="/231123-1/multipass-win.jpg" caption="Windows에서 실행된 Argo">}}
-{{< zoomimg src="/231123-1/multipass-mac2.jpg" caption="Mac에서 실행된 OpenSearch">}}
+{{< zoomimg src="images/231123-1/multipass-win.jpg" caption="Windows에서 실행된 Argo">}}
+{{< zoomimg src="images/231123-1/multipass-mac2.jpg" caption="Mac에서 실행된 OpenSearch">}}
 
 <br>
 

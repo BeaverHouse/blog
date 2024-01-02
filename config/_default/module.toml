@@ -1,117 +1,109 @@
+# mounts
+## archetypes
 [[mounts]]
-source = "config/_default/hyas"
-target = "data"
+  source = "node_modules/@hyas/doks-core/archetypes"
+  target = "archetypes"
 
 [[mounts]]
-source = "node_modules/@hyas/core/assets"
-target = "assets"
+  source = "archetypes"
+  target = "archetypes"
+
+## assets
+[[mounts]]
+  source = "node_modules/@hyas/core/assets"
+  target = "assets"
 
 [[mounts]]
-source = "node_modules/@hyas/core/layouts"
-target = "layouts"
+  source = "node_modules/@hyas/images/assets"
+  target = "assets"
+  excludeFiles = "/scss/**.scss"
 
 [[mounts]]
-source = "node_modules/@hyas/seo/layouts"
-target = "layouts"
+  source = "node_modules/@hyas/doks-core/assets"
+  target = "assets"
+  excludeFiles = ["scss/common/_variables-custom.scss", "scss/common/_custom.scss"]
 
 [[mounts]]
-excludeFiles = "/scss/**.scss"
-source = "node_modules/@hyas/images/assets"
-target = "assets"
+  source = "node_modules/flexsearch"
+  target = "assets/js/vendor/flexsearch"
 
 [[mounts]]
-source = "node_modules/@hyas/images/layouts"
-target = "layouts"
+  source = "node_modules/katex"
+  target = "assets/js/vendor/katex"
 
 [[mounts]]
-source = "node_modules/@hyas/doks-core/archetypes"
-target = "archetypes"
+  source = "node_modules/mermaid"
+  target = "assets/js/vendor/mermaid"
 
 [[mounts]]
-excludeFiles = ["scss/common/_variables-custom.scss", "scss/common/_custom.scss"]
-source = "node_modules/@hyas/doks-core/assets"
-target = "assets"
+  source = "node_modules/@tabler/icons/icons"
+  target = "assets/svgs/tabler-icons"
 
 [[mounts]]
-source = "node_modules/@hyas/doks-core/data"
-target = "data"
+  source = "assets"
+  target = "assets"
+
+## content
+[[mounts]]
+  source = "content"
+  target = "content"
+
+## data
+[[mounts]]
+  source = "node_modules/@hyas/doks-core/data"
+  target = "data"
 
 [[mounts]]
-source = "node_modules/@hyas/doks-core/i18n"
-target = "i18n"
+  source = "config/_default/hyas"
+  target = "data"
 
 [[mounts]]
-source = "node_modules/@hyas/doks-core/layouts"
-target = "layouts"
+  source = "data"
+  target = "data"
+
+## i18n
+[[mounts]]
+  source = "node_modules/@hyas/doks-core/i18n"
+  target = "i18n"
 
 [[mounts]]
-source = "node_modules/@hyas/doks-core/static"
-target = "static"
+  source = "i18n"
+  target = "i18n"
+
+## layouts
+[[mounts]]
+  source = "node_modules/@hyas/core/layouts"
+  target = "layouts"
 
 [[mounts]]
-source = "node_modules/flexsearch"
-target = "assets/js/vendor/flexsearch"
+  source = "node_modules/@hyas/seo/layouts"
+  target = "layouts"
 
 [[mounts]]
-source = "node_modules/katex"
-target = "assets/js/vendor/katex"
+  source = "node_modules/@hyas/images/layouts"
+  target = "layouts"
 
 [[mounts]]
-source = "node_modules/mermaid"
-target = "assets/js/vendor/mermaid"
+  source = "node_modules/@hyas/doks-core/layouts"
+  target = "layouts"
 
 [[mounts]]
-source = "node_modules/@tabler/icons/icons"
-target = "assets/svgs/tabler-icons"
+  source = "node_modules/@hyas/inline-svg/layouts"
+  target = "layouts"
 
 [[mounts]]
-source = "assets/svgs"
-target = "assets/svgs"
+  source = "layouts"
+  target = "layouts"
+
+## static
+[[mounts]]
+  source = "node_modules/@hyas/doks-core/static"
+  target = "static"
 
 [[mounts]]
-source = "node_modules/@hyas/inline-svg/layouts"
-target = "layouts"
-
+  source = "static"
+  target = "static"
+  
 [[mounts]]
-source = "themes/my-doks-theme/assets"
-target = "assets"
-
-[[mounts]]
-source = "themes/my-doks-theme/layouts"
-target = "layouts"
-
-[[mounts]]
-source = "archetypes"
-target = "archetypes"
-
-[[mounts]]
-source = "assets"
-target = "assets"
-
-[[mounts]]
-source = "content"
-target = "content"
-
-[[mounts]]
-source = "data"
-target = "data"
-
-[[mounts]]
-source = "i18n"
-target = "i18n"
-
-[[mounts]]
-source = "layouts"
-target = "layouts"
-
-[[mounts]]
-source = "static"
-target = "static"
-
-[[mounts]]
-source = "node_modules/medium-zoom"
-target = "assets/js/vendor/medium-zoom"
-
-[[mounts]]
-source = "assets/scss/common"
-target = "assets/scss/common"
+  source = "node_modules/medium-zoom"
+  target = "assets/js/vendor/medium-zoom"
