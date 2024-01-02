@@ -1,7 +1,7 @@
 {
   "name": "blog",
   "version": "2.0.0",
-  "description": "Github Blog w/ Hugo & Doks Theme",
+  "description": "Github Blog w/ Hugo & Doks theme",
   "author": "LHU",
   "license": "MIT",
   "scripts": {

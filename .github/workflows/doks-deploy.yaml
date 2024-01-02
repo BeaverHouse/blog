@@ -1,7 +1,7 @@
 # Original from https://github.com/h-enk/doks-gh-pages
 # Fix Deploy process w/ https://gohugo.io/hosting-and-deployment/hosting-on-github/
 
-name: Deploy to Github Pages (Doks Theme)
+name: Deploy to Github Pages (Doks theme)
 
 on:
   push:
