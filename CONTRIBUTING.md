@@ -1,6 +1,6 @@
 # About Contributing
 
-This blog is mainly written in Korean, so it may not help with foreigners.
+This blog is mainly written in Korean, so it may not help with foreigners.  
 이 블로그는 한국어로 작성되어 있습니다.
 
 이 블로그는 [Hugo][hugo], [Doks][doks] 테마 기반으로 되어 있습니다.  
