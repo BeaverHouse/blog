@@ -28,7 +28,7 @@ Selenium은 Web App 자동화, 테스트를 위한 Framework입니다.
 
 Selenium은 처음에는 Web Test를 위해 만들어졌지만, 다른 용도로도 많이 사용되고 있습니다. Selenium을 사용하면 웹사이트와 직접 interaction을 할 수 있기 때문에, 수행 가능한 작업의 폭이 매우 넓어집니다.
 
-{{< zoomimg src="/231012-1/1.png" caption="공식 홈페이지에서도 다양한 사용성을 언급하고 있습니다.">}}
+{{< zoomimg src="images/231012-1/1.png" caption="공식 홈페이지에서도 다양한 사용성을 언급하고 있습니다.">}}
 
 <br>
 

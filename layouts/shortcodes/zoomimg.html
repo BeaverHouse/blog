@@ -3,7 +3,7 @@
 
 {{- $width := false -}}
 {{- if (not $is_vector) -}}
-{{- $width = $image.Width -}}
+{{- $width = .Get "width" | default $image.Width -}}
 {{- end -}}
 {{- with (.Get "width") -}}
 {{- $width = . -}}

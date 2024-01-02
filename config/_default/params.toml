@@ -1,0 +1,133 @@
+# Hugo
+title = "My Docs"
+description = "Congrats on setting up a new Doks project!"
+images = ["cover.png"]
+
+# Doks (@hyas/doks-core)
+[doks]
+  # Color mode
+  colorMode = "auto" # auto (default), light or dark
+  colorModeToggler = true  (this setting is only relevant when colorMode = auto)
+
+  # Navbar
+  navbarSticky = true
+  containerBreakpoint = "lg"
+
+  ## Button
+  navBarButton = false 
+  navBarButtonUrl = "/docs/prologue/introduction/"
+  navBarButtonText = "Get started"
+
+  # FlexSearch
+  flexSearch = true 
+  searchExclKinds = [] # list of page kinds to exclude from search indexing (e.g. ["home", "taxonomy", "term"] )
+  searchExclTypes = [] # list of content types to exclude from search indexing (e.g. ["blog", "docs", "legal", "contributors", "categories"])
+  showSearch = [] # [] (all pages, default) or homepage (optionally) and list of sections (e.g. ["homepage", "blog", "guides"])
+  indexSummary = false # true or false (default); whether to index only the `.Summary` instead of the full `.Content`; limits the respective JSON field size and thus increases loading time
+
+  ## Search results
+  showDate = false 
+  showSummary = true 
+  searchLimit = 10 # 0 (no limit, default) or natural number
+
+  # Global alert
+  alert = false 
+  alertDismissable = true 
+
+  # Bootstrap
+  bootstrapJavascript = false 
+
+  # Nav
+  sectionNav = ["docs"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
+  toTopButton = true
+  breadcrumbTrail = false
+  headlineHash = true
+  scrollSpy = true
+
+  # Multilingual
+  multilingualMode = false 
+  showMissingLanguages = false # whether or not to show untranslated languages in the language menu; true (default) or false
+
+  # Versioning
+  docsVersioning = false 
+  docsVersion = "1.0"
+
+  # UX
+  headerBar = false 
+  backgroundDots = true 
+
+  # Homepage
+  sectionFooter = false 
+
+  # Blog
+  relatedPosts = true
+  imageList = true 
+  imageSingle = true 
+
+  # KaTex
+  katex = false
+
+  # Repository
+  editPage = false 
+  lastMod = false 
+  repoHost = "GitHub" # GitHub (default), Gitea, GitLab, Bitbucket, or BitbucketServer
+  docsRepo = "https://github.com/h-enk/doks"
+  docsRepoBranch = "main" # main (default), master, or <branch name>
+  docsRepoSubPath = "" # "" (none, default) or <sub path>
+
+  [doks.menu]
+    [doks.menu.section]
+      auto = true 
+      collapsibleSidebar = true 
+
+# Debug
+[render_hooks.image]
+  errorLevel = 'ignore' # ignore (default), warning, or error (fails the build)
+
+[render_hooks.link]
+  errorLevel = 'ignore' # ignore (default), warning, or error (fails the build)
+  highlightBroken = false # true or false (default)
+
+# Images (@hyas/images)
+[hyas_images]
+  [hyas_images.landscape]
+    normalize = "1360x765" # "1600x900" (default)
+    lqip = "16x9" # "16x9" (default)
+    widths = [480, 640, 800, 1024]
+  [hyas_images.portrait]
+    normalize = "765x1360" # "900x1600" (default)
+    lqip = "9x16" # "9x16" (default)
+    widths = [480, 640, 800, 1024]
+
+# Inline SVG (@hyas/inline-svg)
+[inline_svg]
+  iconSetDir = "tabler-icons" # "tabler-icons" (default)
+
+# SEO (@hyas/seo)
+[seo]
+  [seo.title]
+    separator = " | "
+    suffix = ""
+  [seo.favicons]
+    sizes = []
+    icon = "favicon.png" # favicon.png (default)
+    svgIcon = "favicon.svg" # favicon.svg (default)
+    maskIcon = "mask-icon.svg" # mask-icon.svg (default)
+    maskIconColor = "white" # white (default)
+  [seo.schemas]
+    type = "Person" # Organization (default) or Person
+    logo = "favicon-512x512.png" # Logo of Organization — favicon-512x512.png (default)
+    name = "HU-Lee" # Name of Organization or Person
+    sameAs = [] # E.g. ["https://github.com/gethyas/hyas", "https://fosstodon.org/@hyas"]
+    images = ["cover.png"] # ["cover.png"] (default)
+    article = [] # Article sections
+    newsArticle = [] # NewsArticle sections
+    blogPosting = ["blog"] # BlogPosting sections
+    product = [] # Product sections
+
+[custom]
+  defaultTheme = "light"
+  commentRepo = "BeaverHouse/blog"
+  commentRepoId = "R_kgDOKaT38w"
+  commentCategory = "Blog Comments"
+  commentCategoryId = "DIC_kwDOKaT3884CbPLr"

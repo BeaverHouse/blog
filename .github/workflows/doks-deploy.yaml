@@ -1,8 +1,7 @@
-# Deploy your Hyas site to GitHub Pages
 # Original from https://github.com/h-enk/doks-gh-pages
 # Fix Deploy process w/ https://gohugo.io/hosting-and-deployment/hosting-on-github/
 
-name: GitHub Pages
+name: Deploy to Github Pages (Doks Theme)
 
 on:
   push:
@@ -22,34 +21,41 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# Default to bash
 defaults:
   run:
     shell: bash
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '16'
-          cache: 'npm'
+          node-version: "18"
+          cache: "npm"
 
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v4
       - name: Install dependencies
-        run: npm install
-
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build production website
-        run: npm run build
-
-      # fix gh-pages branch push to artifact upload
+        env:
+          # For maximum backward compatibility with Hugo modules
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          npm run build \
+            -- \
+            --gc \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3.0.0
         with:
           path: ./public
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages
@@ -59,4 +65,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
