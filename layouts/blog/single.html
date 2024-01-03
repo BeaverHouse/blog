@@ -32,17 +32,20 @@
         let getTheme =
           window.localStorage && window.localStorage.getItem("theme");
         getTheme =
-          getTheme == null ? "{{$.Site.Params.defaultTheme}}" : getTheme;
+          getTheme == null ? "{{site.Params.custom.defaultTheme}}" : getTheme;
 
         const theme = getTheme === "dark" ? "dark" : "light";
         let s = document.createElement("script");
         s.src = "https://giscus.app/client.js";
-        s.setAttribute("data-repo", "{{$.Site.Params.commentRepo}}");
-        s.setAttribute("data-repo-id", "{{$.Site.Params.commentRepoId}}");
-        s.setAttribute("data-category", "{{$.Site.Params.commentCategory}}");
+        s.setAttribute("data-repo", "{{site.Params.custom.commentRepo}}");
+        s.setAttribute("data-repo-id", "{{site.Params.custom.commentRepoId}}");
+        s.setAttribute(
+          "data-category",
+          "{{site.Params.custom.commentCategory}}"
+        );
         s.setAttribute(
           "data-category-id",
-          "{{$.Site.Params.commentCategoryId}}"
+          "{{site.Params.custom.commentCategoryId}}"
         );
         s.setAttribute("data-mapping", "pathname");
         s.setAttribute("data-strict", "1");
