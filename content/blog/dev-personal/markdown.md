@@ -77,7 +77,7 @@ Hugo의 경우, shortcode 기능을 지원합니다.
 <br>
 
 <sub>(해당 gist는 무작위로 가져온 것입니다.)</sub>
-{{< gist anvicode f95f07566d9fd0ad21506c9db2c77dcd merging-two-dictionaries.py >}}
+{{< gist anvicode f95f07566d9fd0ad21506c9db2c77dcd "merging-two-dictionaries.py" >}}
 
 <br>
 
